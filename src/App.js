@@ -39,7 +39,7 @@ function App() {
 
   useEffect(() => {
     try {
-      axios.post(`${process.env.REACT_APP_BASE_URL}/session-check`, { token: localStorage.getItem('userToken') }).then((res) => {
+      axios.post(`https://login-sigma-flax.vercel.app/session-check`, { token: localStorage.getItem('userToken') }).then((res) => {
         if (res.data) {
           dispatch({
             type: 'LOGIN_USER',
