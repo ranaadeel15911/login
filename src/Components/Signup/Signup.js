@@ -32,7 +32,7 @@ const [loading,setLoading]=useState(false)
         // console.log(data,'data here')
         try {
             setLoading(true)
-            const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/signUp`, data);
+            const response = await axios.post(`https://backend-web-phi.vercel.app/signUp`, data);
             console.log(response.data.message)
             console.log(response.data , "here is data ")
             console.log(response.data.email,"user email is this")

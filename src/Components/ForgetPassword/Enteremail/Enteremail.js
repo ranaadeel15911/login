@@ -17,7 +17,7 @@ const navigate = useNavigate()
 
     try {
       setLoading(true)
-      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/forgot-password`, { email });
+      const response = await axios.post(`https://backend-web-phi.vercel.app/forgot-password`, { email });
 
       // If the request was successful
       toast.success('Password reset email sent successfully!');

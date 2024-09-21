@@ -23,7 +23,7 @@ const EnterOTP = () => {
         otp: otp,
       };
 
-      const response = await axios.post(`http://localhost:3010/verify-email`, data);
+      const response = await axios.post(`https://backend-web-phi.vercel.app/verify-email`, data);
 
       if (response.data.message === "User not found") {
         toast.error("User not found");

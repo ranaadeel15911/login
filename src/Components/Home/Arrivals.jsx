@@ -92,7 +92,7 @@ const Arrivals = () => {
             const userId = decoded?.tokenId || "Login To Get User";
 
             // Now send the video URL to your backend
-            const backendResponse = await axios.post(`${process.env.REACT_APP_BASE_URL}/add-video`, {
+            const backendResponse = await axios.post(`https://backend-web-phi.vercel.app/add-video`, {
                 url: videoUrl, // Sending the video URL to the backend
                 user: userId
             });

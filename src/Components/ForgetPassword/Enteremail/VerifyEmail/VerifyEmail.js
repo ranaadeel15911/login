@@ -16,7 +16,7 @@ export const VerifyEmail = () => {
   // Function to verify the token
   const verifyEmailToken = async () => {
     try {
-      const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/reset-password/${token}`);
+      const response = await axios.get(`https://backend-web-phi.vercel.app/reset-password/${token}`);
       if (response.status === 200) {
         setIsVerified(true);
       } else {
@@ -40,7 +40,7 @@ export const VerifyEmail = () => {
     }
 
     try {
-      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/reset-password/${token}`, {
+      const response = await axios.post(`https://backend-web-phi.vercel.app/reset-password/${token}`, {
         password: newPassword,
       });
       if (response.status === 200) {
