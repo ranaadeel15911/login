@@ -35,7 +35,7 @@ export const Login = () => {
 
   const Login = async (data) => {
     try {
-      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/login`, data);
+      const response = await axios.post(`https://login-sigma-flax.vercel.app/login`, data);
       let loginUser = response.data;
       console.log(loginUser)
       if (loginUser) {
