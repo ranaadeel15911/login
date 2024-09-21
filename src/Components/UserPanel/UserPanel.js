@@ -28,7 +28,7 @@ const UserPanel = () => {
     useEffect(() => {
         try {
             setLoading(true);
-            axios.get(`${process.env.REACT_APP_BASE_URL}/order`).then((res) => {
+            axios.get(`https://backend-web-phi.vercel.app/order`).then((res) => {
                 if (res.data) {
                     setOrder(res.data);
                     setLoading(false);
